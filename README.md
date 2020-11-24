@@ -17,14 +17,14 @@ var api = graylog.connect({
   }, // Optional. Default: null. Basic access authentication
   protocol: 'https', // Optional. Default: 'http'. Connection protocol
   host: 'example.com', // Optional. Default: 'localhost'. API hostname
-  port: '12900', // Optional. Default: '12900'. API port
-  path: '/api' // Optional. Default: ''. API Path
+  port: '12900', // Optional. Default: '9000'. API port
+  path: '/api' // Optional. Default: '/api'. API Path
 });
 
 api.searchAbsolute({ // parameters
   query: 'source:apache',
-  from: '2015-07-24T00:00:00.000Z',
-  to: '2015-07-25T00:00:00.000Z',
+  from: '2020-11-15T00:00:00.000Z',
+  to: '2020-11-23T00:00:00.000Z',
   limit: '10',
   fields: 'message,timestamp',
   sort: 'asc'
@@ -36,7 +36,24 @@ api.searchAbsolute({ // parameters
   }
 });
 
-updateUserPassword({ // parameters
+// Or you can use it as a promise
+
+api.searchAbsolute({
+  // parameters
+  query: 'info*',
+  from: '2020-11-15T00:00:00.000Z',
+  to: '2020-11-23T00:00:00.000Z',
+  limit: '5',
+  fields: 'message,timestamp,Ip',
+  sort: 'asc',
+}).then((data) => {
+  // console.log(data);
+  console.log(JSON.stringify(data.messages, null, 2))
+}).catch((error) => {
+  console.log(error);
+})
+
+api.updateUserPassword({ // parameters
   old_password: 'secret',
   password: 'qwerty123'
 }, { // path

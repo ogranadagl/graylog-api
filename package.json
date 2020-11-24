@@ -33,7 +33,7 @@
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kolomiichenko/graylog-api.git"
+    "url": "https://github.com/ogranadagl/graylog-api.git"
   },
   "keywords": [
     "graylog",
@@ -48,7 +48,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "http://github.com/kolomiichenko/graylog-api/issues"
+    "url": "http://github.com/ogranada/graylog-api/issues"
   },
-  "homepage": "http://github.com/kolomiichenko/graylog-api"
+  "homepage": "http://github.com/ogranada/graylog-api"
 }
