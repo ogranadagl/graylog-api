@@ -3,11 +3,16 @@
   "version": "1.2.0",
   "description": "Node.js module for Graylog2 API",
   "author": {
-    "name": "Andrii Kolomiichenko",
-    "email": "bboywilld@gmail.com",
-    "url": "http://github.com/kolomiichenko"
+    "name": "",
+    "email": "oscar.andres.granada@gmail.com",
+    "url": "http://github.com/ogranadagl"
   },
   "contributors": [
+    {
+      "name": "Andrii Kolomiichenko",
+      "email": "bboywilld@gmail.com",
+      "url": "http://github.com/kolomiichenko"
+    },
     {
       "name": "Aleksander Szmigiel",
       "email": "leksander.szmigiel@esky.pl"
@@ -23,7 +28,7 @@
     }
   ],
   "dependencies": {
-    "request": "^2.60.0"
+    "request": "^2.88.2"
   },
   "readmeFilename": "README.md",
   "repository": {
